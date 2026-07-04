@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#12081d;
+
+    color:#fff;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+/* ===========================
+   Background
+=========================== */
+
+body::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,#4b1879 0%,transparent 45%),
+    radial-gradient(circle at bottom,#220033 0%,transparent 45%),
+    linear-gradient(135deg,#16091f,#12071c,#1a0f2d);
+
+    z-index:-2;
+
+}
+
+.background-glow{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle,#7a3cff22 0%,transparent 70%);
+
+    filter:blur(100px);
+
+    z-index:-1;
+
+}
+
+/* ===========================
+   Top Icon
+=========================== */
+
+.top-icon{
+
+    position:fixed;
+
+    top:25px;
+    right:25px;
+
+    width:46px;
+    height:46px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.top-icon:hover{
+
+    transform:rotate(180deg);
+
+    background:#b05dff;
+
+}
+
+/* ===========================
+   Main
+=========================== */
+
+.container{
+
+    width:90%;
+
+    max-width:950px;
+
+    text-align:center;
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+.heading{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3rem;
+
+    margin-bottom:8px;
+
+}
+
+.sub-heading{
+
+    color:#d59bff;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   Video Card
+=========================== */
+
+.video-card{
+
+    width:100%;
+
+    max-width:760px;
+
+    margin:auto;
+
+    padding:18px;
+
+    border:2px dotted #b678ff;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+    0 0 35px rgba(150,80,255,.25);
+
+}
+
+.video{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border-radius:16px;
+
+    background:#000;
+
+    outline:none;
+
+}
+
+/* ===========================
+   Progress Bar
+=========================== */
+
+.progress-wrapper{
+
+    width:760px;
+
+    max-width:100%;
+
+    margin:25px auto 0;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:8px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#ff7dbd,#b05dff);
+
+    transition:width .15s linear;
+
+}
+
+.time{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:10px;
+
+    color:#d8ccef;
+
+    font-size:.9rem;
+
+}
+
+/* ===========================
+   Text
+=========================== */
+
+.watch-text{
+
+    margin-top:25px;
+
+    color:#e8dff7;
+
+    font-size:1rem;
+
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.smile-btn{
+
+    margin-top:35px;
+
+    padding:14px 42px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#ff79b7,#ff5da4);
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:.45s;
+
+    box-shadow:
+    0 0 20px rgba(255,120,180,.45);
+
+}
+
+.smile-btn.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.smile-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 35px rgba(255,120,180,.7);
+
+}
+
+/* ===========================
+   Bottom Heart
+=========================== */
+
+.heart-btn{
+
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    width:58px;
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#b05dff;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 0 20px rgba(176,93,255,.5);
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.heading{
+
+    font-size:2.4rem;
+
+}
+
+.video-card{
+
+    padding:12px;
+
+}
+
+.progress-wrapper{
+
+    margin-top:20px;
+
+}
+
+}

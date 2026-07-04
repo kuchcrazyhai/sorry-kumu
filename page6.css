@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#12081d;
+
+    color:white;
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+}
+
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+body::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,#4d2277 0%,transparent 42%),
+    radial-gradient(circle at bottom,#250036 0%,transparent 42%),
+    linear-gradient(135deg,#15091f,#12071c,#190d2a);
+
+    z-index:-2;
+
+}
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+
+    width:100%;
+
+    max-width:1100px;
+
+    text-align:center;
+
+    animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.title{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:4rem;
+
+    color:#8f53e4;
+
+    font-weight:400;
+
+}
+
+.subtitle{
+
+    margin-top:-6px;
+
+    color:#c8bfd8;
+
+    font-size:1rem;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================
+   BOUQUET
+========================================== */
+
+.bouquet-glow{
+
+    width:340px;
+
+    height:260px;
+
+    margin:0 auto 20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(180,120,255,.28),
+    transparent 70%);
+
+}
+
+.bouquet-card{
+
+    padding:15px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(180,120,255,.20);
+
+}
+
+.bouquet{
+
+    width:220px;
+
+    animation:floatFlower 4s ease-in-out infinite;
+
+}
+
+@keyframes floatFlower{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   PROMISE GRID
+========================================== */
+
+.promise-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+
+    width:700px;
+
+    margin:15px auto;
+
+}
+
+.promise{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(170,100,255,.15);
+
+    border-radius:14px;
+
+    padding:16px;
+
+    font-size:.86rem;
+
+    transition:.35s;
+
+    backdrop-filter:blur(8px);
+
+}
+
+.promise:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#9d5eff;
+
+    box-shadow:0 0 18px rgba(170,100,255,.35);
+
+}
+
+/* ==========================================
+   LOVE TEXT
+========================================== */
+
+.love{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:2.7rem;
+
+    color:#8d4be0;
+
+    margin-top:20px;
+
+}
+
+.signature{
+
+    color:#9d92b6;
+
+    font-size:.82rem;
+
+    margin-top:6px;
+
+}
+
+/* ==========================================
+   BOTTOM DOTS
+========================================== */
+
+.dots{
+
+    margin-top:16px;
+
+}
+
+.dots span{
+
+    width:9px;
+
+    height:9px;
+
+    display:inline-block;
+
+    margin:0 5px;
+
+    border-radius:50%;
+
+    background:#8d55df;
+
+    opacity:.85;
+
+}
+
+/* ==========================================
+   TOP BUTTON
+========================================== */
+
+.top-icon{
+
+    position:fixed;
+
+    top:22px;
+
+    right:22px;
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.top-icon:hover{
+
+    background:#9d5eff;
+
+    transform:rotate(180deg);
+
+}
+
+/* ==========================================
+   HEART
+========================================== */
+
+.heart-btn{
+
+    position:fixed;
+
+    bottom:22px;
+
+    right:22px;
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#9d5eff;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.3s;
+
+    box-shadow:0 0 20px rgba(170,90,255,.45);
+
+}
+
+.heart-btn:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:900px){
+
+.promise-grid{
+
+    width:95%;
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.title{
+
+    font-size:3rem;
+
+}
+
+.love{
+
+    font-size:2.3rem;
+
+}
+
+.bouquet{
+
+    width:170px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.promise-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.title{
+
+    font-size:2.5rem;
+
+}
+
+}
+
+.title{
+    transform: translateY(15px);
+}
+
+.subtitle{
+    transform: translateY(15px);
+}
+
+.signature{
+    transform: translateY(-7px);
+}
+
+.dots{
+    transform: translateY(-23px);
+}
